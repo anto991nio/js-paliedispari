@@ -3,23 +3,33 @@ var parola = prompt("Inserisci una parola");
 
 /* Effettuo una verifica per vedere se l'utente ha inserito una parola o un numero */
 var verificaParola = parseInt(parola);
-if(!Number.isNaN(verificaParola)){
-    alert("Hai inserito un numero");
+if (!Number.isNaN(verificaParola)) {
+  alert("Hai inserito un numero");
 }else{
 
-    /* se ha inserito una parola la inverto */
+/* se ha inserito una parola la inverto */
 
-var parolaInversa = invertiParola(parola); 
 
-/* questa parola viene invertita tramite una funzione, utilizzando .split trasformo la mia stringa in un array, utilizzo .reverse per invertire l'ordine e . join per ritrasformarmo in una stringa. */
-function invertiParola(parola){
-  var risultatoParola = parola.split('').reverse().join('');  
-  return risultatoParola;
+/* questa parola viene invertita tramite un ciclo for*/
+
+var parolaInvertita = ""
+for (var i = parola.length - 1; i >= 0; i--) {
+  parolaInvertita += parola[i];
 }
+
 /* a questo punto basta semplicemente verificare se la parola inserita e la parola invertita sono uguale riducendole tutte in minuscolo così anche se l'utente inserisce una lettera maiuscola il controllo può essere effettuato */
-if(parola.toLowerCase() == parolaInversa.toLowerCase()){
-    console.log("la parola" + " " + parola + " " +"è palindroma");
+
+
+function parolaPalindroma() {
+  if (parola.toLowerCase() == parolaInvertita.toLowerCase()) {
+    return "la parola" + " " + parola + " " + "è palindroma";
+
   } else {
-    console.log("la parola" + " " + parola + " " + "non è palindroma");
+    return ("la parola" + " " + parola + " " + "non è palindroma");
   }
+
+}
+
+var risultato = parolaPalindroma();
+console.log(risultato);
 }

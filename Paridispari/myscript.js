@@ -5,6 +5,10 @@ var pariDispari = prompt("Scegli pari o dispari")
 /* modifico i caratteri in modo da poterli confrontare con il risultato */
 pariDispari=pariDispari.toLowerCase();
 
+if (pariDispari !== "pari" && pariDispari !== "dispari"){
+    alert("Devi scegliere tra pari e dispari")
+}else{
+
 /* chiedo all'utente di inserire un numero e se è corretto può proseguire */
 
 var userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
@@ -48,4 +52,5 @@ if(vincitore ===pariDispari){
     console.log("Hai vinto");
 }else{
     console.log("Hai perso");
+}
 }

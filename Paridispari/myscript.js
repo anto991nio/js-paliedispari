@@ -34,16 +34,16 @@ console.log(somma);
 
 
  /* con una funziona verifico se sono pari o dispari */
-function sommaPariDispari() {
+function sommaPariDispari(sommaNumeri) {
 
-    if (somma % 2 === 0) {
+    if (sommaNumeri % 2 === 0) {
         return "pari"
     } else {
         return "dispari"
     }
 }
 
-var vincitore = sommaPariDispari();
+var vincitore = sommaPariDispari(somma);
 /*  confronto il risultato con quello immesso dall'utente per verificare se ha vinto o meno */
 
 if(vincitore ===pariDispari){

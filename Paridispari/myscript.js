@@ -1,4 +1,3 @@
-
 /* Chiedo all'utente di scegliere tra pari e dispari */
 var pariDispari = prompt("Scegli pari o dispari")
 
@@ -45,7 +44,6 @@ function sommaPariDispari() {
 }
 
 var vincitore = sommaPariDispari();
-
 /*  confronto il risultato con quello immesso dall'utente per verificare se ha vinto o meno */
 
 if(vincitore ===pariDispari){

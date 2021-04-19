@@ -20,8 +20,8 @@ for (var i = parola.length - 1; i >= 0; i--) {
 /* a questo punto basta semplicemente verificare se la parola inserita e la parola invertita sono uguale riducendole tutte in minuscolo così anche se l'utente inserisce una lettera maiuscola il controllo può essere effettuato */
 
 
-function parolaPalindroma() {
-  if (parola.toLowerCase() == parolaInvertita.toLowerCase()) {
+function parolaPalindroma(parolaOriginale , parolaDaControllare) {
+  if (parolaOriginale.toLowerCase() == parolaDaControllare.toLowerCase()) {
     return "la parola" + " " + parola + " " + "è palindroma";
 
   } else {
@@ -29,7 +29,5 @@ function parolaPalindroma() {
   }
 
 }
-
-var risultato = parolaPalindroma();
-console.log(risultato);
+console.log(parolaPalindroma(parola , parolaInvertita));
 }

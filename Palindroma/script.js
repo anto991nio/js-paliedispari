@@ -5,29 +5,35 @@ var parola = prompt("Inserisci una parola");
 var verificaParola = parseInt(parola);
 if (!Number.isNaN(verificaParola)) {
   alert("Hai inserito un numero");
-}else{
+} else {
 
-/* se ha inserito una parola la inverto */
-
-
-/* questa parola viene invertita tramite un ciclo for*/
-
-var parolaInvertita = ""
-for (var i = parola.length - 1; i >= 0; i--) {
-  parolaInvertita += parola[i];
-}
-
-/* a questo punto basta semplicemente verificare se la parola inserita e la parola invertita sono uguale riducendole tutte in minuscolo così anche se l'utente inserisce una lettera maiuscola il controllo può essere effettuato */
+  /* se ha inserito una parola la inverto */
 
 
-function parolaPalindroma(parolaOriginale , parolaDaControllare) {
-  if (parolaOriginale.toLowerCase() == parolaDaControllare.toLowerCase()) {
-    return "la parola" + " " + parola + " " + "è palindroma";
+  /* questa parola viene invertita tramite un ciclo for*/
 
-  } else {
-    return ("la parola" + " " + parola + " " + "non è palindroma");
+  var parolaInvertita = ""
+  for (var i = parola.length - 1; i >= 0; i--) {
+    parolaInvertita += parola[i];
   }
 
-}
-console.log(parolaPalindroma(parola , parolaInvertita));
+  /* a questo punto basta semplicemente verificare se la parola inserita e la parola invertita sono uguale riducendole tutte in minuscolo così anche se l'utente inserisce una lettera maiuscola il controllo può essere effettuato */
+
+
+  function parolaPalindroma(parolaOriginale, parolaDaControllare) {
+    if (parolaOriginale.toLowerCase() == parolaDaControllare.toLowerCase()) {
+      return true
+
+    } else {
+      return false
+    }
+
+  }
+
+  if (parolaPalindroma(parola, parolaInvertita)) {
+    console.log("La parola inserita è palindroma")
+
+  }else{
+    console.log("la parola inserita non è palindroma")
+  }
 }
